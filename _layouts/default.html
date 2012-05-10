@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>{{ page.title }}</title>
+  <meta name="author" content="Adrien Lecharpentier" />
+  <link href="/atom.xml" rel="alternate" title="Adrien Lecharpentier's blog" type="application/atom+xml" />
+
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="/css/bootstrap-responsive.min.css" type="text/css" />
+
+  <style>
+    body { padding-top: 60px; }
+    .sidebar-nav-fixed {
+      padding: 9px 0;
+      position:fixed;
+      left:20px;
+      top:60px;
+      width:250px;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="navbar navbar-fixed-top" id="navbar">
+    <a href="http://github.com/alecharp"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/">Adrien Lecharpentier</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="span9 offset3">
+        {{ content }}
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="row-fluid">
+        <div style="margin-top:45px;padding:35px 0 36px 0;border-top:1px solid #e5e5e5;">
+          <p class="pull-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>Last update: {{ site.time | date_to_string }}</p>
+          <p>
+            Great thanks to <a href="http://twitter.github.com/bootstrap/">Twitter bootstrap</a>
+          </p>
+          <p>
+            You can found source code of this page at <a href="https://github.com/alecharp/www.lecharpentier.org">github.com/alecharp/www.lecharpentier.org</a>
+          </p>
+          <p>
+            &copy; Adrien Lecharpentier 2012
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

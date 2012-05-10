@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+    <div class="row">
+      <a href="/">&larr; Back to home page</a>
+    </div>
+    <div class="page-header">
+      <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+      <h6>{% if page.date %}published on {{ page.date | date_to_long_string }} @ {{ page.date | date: '%H:%M:%S' }}{% endif %}{% if page.author %} by {{ page.author }} {% endif %}</h6>
+
+    </div>
+    <div style="text-align: justify">
+      {{ content }}
+    </div>
+
+{% if page.tags != empty or page.categories != empty %}
+    <div class="row well" style="margin-top: 30px">
+      {% if page.tags != empty %}
+      Tags: 
+      {% for tag in page.tags %}
+        <span class="label label-info">{{ tag }}</span>
+      {% endfor %}
+      <br/>
+      {% endif %}
+      {% if page.categories != empty %}
+      Categories: {% for category in page.categories %}
+        <span class="label label-inverse">{{ category }}</span>
+      {% endfor %}
+      {% endif %}
+    </div>
+{% endif %}
