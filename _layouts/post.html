@@ -14,20 +14,12 @@ layout: default
       {{ content }}
     </div>
 
-{% if page.tags != empty or page.categories != empty %}
+{% if page.tags != empty %}
     <div class="row well" style="margin-top: 30px">
-      {% if page.tags != empty %}
-      Tags: 
+      <i class="icon-tags"></i> Tags: 
       {% for tag in page.tags %}
-        <span class="label label-info">{{ tag }}</span>
+        <span class="label label-info"><i class="icon-tag icon-white"></i> {{ tag }}</span>
       {% endfor %}
-      <br/>
-      {% endif %}
-      {% if page.categories != empty %}
-      Categories: {% for category in page.categories %}
-        <span class="label label-inverse">{{ category }}</span>
-      {% endfor %}
-      {% endif %}
     </div>
 {% endif %}
 
