@@ -7,7 +7,7 @@ layout: default
     </div>
     <div class="page-header">
       <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
-      <h6>{% if page.date %}published on {{ page.date | date_to_long_string }} @ {{ page.date | date: '%H:%M:%S' }}{% endif %}{% if page.author %} by {{ page.author }} {% endif %}</h6>
+      <h6>published {% if page.date %}on {{ page.date | date_to_long_string }} @ {{ page.date | date: '%H:%M:%S' }}{% endif %}{% if page.author %} by {{ page.author }} {% endif %}</h6>
 
     </div>
     <div style="text-align: justify">
