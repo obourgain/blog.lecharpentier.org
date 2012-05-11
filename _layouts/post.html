@@ -14,14 +14,20 @@ layout: default
       {{ content }}
     </div>
 
-{% if page.tags != empty %}
     <div class="row well" style="margin-top: 30px">
+{% if page.tags != empty %}
+      <p>
       <i class="icon-tags"></i> Tags: 
       {% for tag in page.tags %}
         <span class="label label-info"><i class="icon-tag icon-white"></i> {{ tag }}</span>
       {% endfor %}
-    </div>
+      </p>
 {% endif %}
+      <p>
+        <a href="{{page.url}}">Permalink</a> | <a href="#disqus_thread">Commentaires</a>
+      </p>
+      
+    </div>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
