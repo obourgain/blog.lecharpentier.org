@@ -1,4 +1,17 @@
+title: alecharp's blog
+author: Adrien Lecharpentier
+email: "adrien.lecharpentier@gmail.com"
+
+rss_feed: "/atom.xml"
+future: false
+
 markdown: rdiscount
+rdiscount
+  extensions: [smart, generate_toc]
 pygments: true
 
 exclude: [README.md]
+
+socialize: "true"
+socialize_twitter: "alecharp"
+socialize_github: "alecharp"

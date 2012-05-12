@@ -1,2 +1,5 @@
+<li class="nav-header">References</li>
 <li><a href="/sitemap.xml"><i class="icon-map-marker"></i> Site map</a></li>
 <li><a href="/atom.xml"><i class="icon-asterisk"></i> RSS</a></li>
+<li class="nav-header">Licenses</li>
+<li><a href="/LICENSE.html">License blog</a></li>
