@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr-fr">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>{{ page.title }}</title>
@@ -14,6 +14,25 @@
 
   <style>
     body { padding-top: 60px; }
+    #footer { 
+      text-align: center; 
+      color: #aaa; 
+    }
+    #footer a, #footer a:hover {
+      text-decoration: none;
+      font-weight: bold;
+      color: #aaa;
+    }
+    #footer ul li { 
+      margin: 0 10px 0 0; 
+      padding: 0 10px 0 0; 
+      list-style: none outside; 
+      border-right: 1px solid #aaa; 
+      display: inline; 
+    }
+    #footer ul li:last-child {
+      border-right: none;
+    }
   </style>
 
 </head>
@@ -29,46 +48,53 @@
         </a>
         <a class="brand" href="/">Adrien Lecharpentier</a>
         <ul class="nav">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Related <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              {% include related %}
-            </ul>
-          </li>
+          {% include related %}
         </ul>
       </div>
     </div>
   </div>
 
   <div class="container-fluid">
-    <div class="row">
-      <div class="span9 offset3">
+    <div class="row-fluid">
+      <div class="span2"></div>
+      <div class="span8">
         {{ content }}
+        <p class="pull-right">
+          <a href="#">Back to top</a>
+        </p>
       </div>
     </div>
 
-    <footer class="footer">
-      <div class="row-fluid">
-        <div style="margin-top:45px;padding:35px 0 36px 0;border-top:1px solid #e5e5e5;">
-          <p class="pull-right">
-            <a href="#">Back to top</a>
-          </p>
-          <p>Last update: {{ site.time | date_to_string }}</p>
-          <p>
-            Great thanks to <a href="http://twitter.github.com/bootstrap/">Twitter bootstrap</a>
-          </p>
-          <p>
-            You can found source code of this page at <a href="https://github.com/alecharp/blog.lecharpentier.org">github.com/alecharp/blog.lecharpentier.org</a>
-          </p>
-          <p>
-            &copy; Adrien Lecharpentier 2012
-          </p>
-        </div>
+    <footer class="footer" id="footer">
+      <div class="row-fluid" style="padding:10px 0 36px 0">
+        <hr/>
+        <p>
+          Great thanks to <a href="http://twitter.github.com/bootstrap/">Twitter bootstrap</a>
+           | 
+          Blog source code: <a href="https://github.com/alecharp/blog.lecharpentier.org">github.com/alecharp/blog.lecharpentier.org</a>
+          <br />
+          &copy; Adrien Lecharpentier 2012
+        </p>
+        <p>Last update: {{ site.time | date_to_string }}</p>
       </div>
     </footer>
   </div>
   
   <script src="/js/jquery-1.7.2.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
+  
+  <!-- Google analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-11344673-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
 </body>
 </html>
