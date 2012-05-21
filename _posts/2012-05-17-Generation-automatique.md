@@ -1,11 +1,11 @@
 ---
 layout: post
 date: 2012-05-17 18:05:12
-title: Génération automatique
+title: Génération automatique avec jekill, git / github et apache
 tags: jekyll git github apache cgi webhooks-url markdown
 author: adrien
 ---
-Alors ce n'est pas parce aue j'ai choisi de passer sur Jekyll aue j'ai 
+Alors ce n'est pas parce que j'ai choisi de passer sur Jekyll que j'ai 
 envie de tout refaire à la main. Par exemple, je n'ai pas envie de devoir
 regénérer le site web à chaque fois que j'écris un nouvel article.
 
@@ -15,7 +15,7 @@ Pour faire ça, ce n'est pas très compliqué avec le bon combo d'outils :
 <div class="alert alert-info">Je ne vais pas mettre les chemins d'accès 
 disque dans l'article car je suis un peu timide...</div>
 
-## Création du script de mise à jour
+## Script bash de génération avec jekyll
 On commence par mettre en place un script qui permettra de récupérer les
 derniers articles publiés et générer les pages statiques. 
 
@@ -73,6 +73,12 @@ Après avoir redémarrer le service apache (`/etc/init.d/apache2 restart`),
 vous pouvez essayer l'URL *http://name.extension/name-that-you-choose/script-name*
 qui doit exécuter le script.
 
+<div class="alert alert-warn">J'ai un peu luté sur cette partie pour la
+simple raison que l'utilisateur qui exécute le script dans le process du
+serveur web n'avait ni python ni pygmentize dans son path. De ce fait,
+la génération de rendait pas des pages correctes.</div>
+
+
 ## Configuration de Github.com
 On configure maintenant github pour qu'à la réception d'un push, il sollicite
 une url, l'URL du script configuré ci-dessus.
@@ -92,3 +98,22 @@ permet de m'assurer que la publication d'article n'est fait que sur la
 branche master. Il suffit de merger ou rebaser les articles dans master
 puis de pusher master sur github pour que le site soit généré à nouveau
 grâce au script.
+
+Il y a plein de moyen pour publier votre site généré avec jekyll. Je n'ai
+peut-être pas choisi la plus simple mais celle qui me convient le mieux.
+Une autre solution envisageable selon moi est celle de tâches dans un 
+`Rakefile` : l'une pour la génération du site en local, l'autre pour faire
+un rsync du site local (`_site`) vers le *DocumentRoot* de votre serveur 
+apache (via ssh ou file). Mais là encore, il faudrait effectuer des tâches
+sur ma machine pour la génération. Avec ma solution, on pourrait imaginer 
+écrire un article sur un mobile, ou sur un ordinateur d'un ami (pas les 
+clés ssh pour pusher sur github) et n'avoir qu'à uploader à la main sur 
+la branche master le fichier de l'article via l'interface web de github.
+Alors la publication se ferai toute seule.
+
+## Nota Bene
+À force d'écrire des articles (non je ne les ai pas tous publiés), j'ai
+créé une task dans un `Rakefile` pour créer la structure du fichier d'un
+article automatique. Ainsi, je commence plus vite un article. C'est pas 
+pour ça que je les écris mieux, plus vite ou avec moins de fautes me 
+direz-vous.
