@@ -10,7 +10,7 @@ rdiscount
   extensions: [smart, generate_toc]
 pygments: true
 
-exclude: [README.md]
+exclude: [README.md, Rakefile]
 
 socialize: "true"
 socialize_twitter: "alecharp"
