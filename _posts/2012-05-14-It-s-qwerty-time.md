@@ -5,7 +5,7 @@ title: It's QWERTY time
 tags: qwerty keyboard unrelated
 ---
 For few time, people don't stop telling me that for coding, nothing is
-best than Qwerty keyboard. 
+better than Qwerty keyboard. 
 
 As I don't the stupid guy who never try out and still tell everyone: 
 "_nothing is better than azerty!!_" so I'm trying it. To be precise, as
