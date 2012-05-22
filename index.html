@@ -10,10 +10,8 @@ title: Adrien Lecharpentier's blog
     {% assign header_limit = 50 %}
     <h1>{{ site.posts.first.title }}</h1>
     {{ site.posts.first.content | truncatewords: header_limit }}
-    {% if site.posts.first.content.size > header_limit %}
-      <br/>
-      <a class="btn btn-info btn-mini" href="{{ site.posts.first.url }}">En savoir plus</a>
-    {% endif %}
+    <br/>
+    <a class="btn btn-info btn-small" href="{{ site.posts.first.url }}">En savoir plus</a>
   </div>
   {% assign posts_limit = 10 %}
   <h2>10 Derniers articles</h2>
