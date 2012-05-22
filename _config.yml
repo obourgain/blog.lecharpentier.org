@@ -2,12 +2,14 @@ title: alecharp's blog
 author: Adrien Lecharpentier
 email: "adrien.lecharpentier@gmail.com"
 
+permalink: pretty
+
 rss_feed: "/atom.xml"
 future: false
 
 markdown: rdiscount
 rdiscount
-  extensions: [smart, generate_toc]
+  extensions: [smart]
 pygments: true
 
 exclude: [README.md, Rakefile]
