@@ -1,0 +1,23 @@
+<aside style="border-left: 1px solid #E5E5E5; padding-left: 20px;">
+  <h2>Author</h2>
+  <ul class="thumbnails">
+    <li>
+      <a href="{{ page.author | gravatar_profile }}" class="thumbnail">
+        <img src="{{ page.author | gravatar_img }}?s=150&r=pg&d=mm" />
+      </a>
+    </li>
+  </ul>
+  {% if page.contrib %}
+  <h3>Contributeurs</h3>
+  <ul class="thumbnails">
+    {% for contrib in page.contrib %}
+      <li>
+          <a href="{{ contrib | gravatar_profile }}" class="thumbnail">
+            <img src="{{ contrib | gravatar_img }}?s=50&r=pg&d=mm"
+              alt="{{ contrib }}" />
+          </a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</aside >

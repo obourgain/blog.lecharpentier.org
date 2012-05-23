@@ -3,7 +3,10 @@ layout: post
 date: 2012-05-17 18:05:12
 title: Génération automatique avec jekill, git / github et apache
 tags: jekyll git github apache cgi webhooks-url markdown
-author: adrien
+author: adrien.lecharpentier@gmail.com
+excerpt: Passer de wordpress à Jekyll, ça peut faire peur pour la mise 
+  en ligne de nouveaux posts. Heureusement, certains outils et une légère
+  configuration permettent de passer outre ce soucis.
 ---
 Alors ce n'est pas parce que j'ai choisi de passer sur Jekyll que j'ai 
 envie de tout refaire à la main. Par exemple, je n'ai pas envie de devoir
