@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr-fr">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>{{ page.title }}</title>
+  <meta name="author" content="Adrien Lecharpentier" />
+  <link href="/atom.xml" rel="alternate" title="Adrien Lecharpentier's blog ATOM" type="application/atom+xml" />
+
+  <!-- twitter CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="/css/bootstrap-responsive.min.css" type="text/css" />
+  <!-- syntax hightlight CSS -->
+  <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+
+  <style>
+    body { padding-top: 60px; }
+    #footer { 
+      text-align: center; 
+      color: #aaa; 
+    }
+    #footer a, #footer a:hover {
+      text-decoration: none;
+      font-weight: bold;
+      color: #aaa;
+    }
+    #footer ul li { 
+      margin: 0 10px 0 0; 
+      padding: 0 10px 0 0; 
+      list-style: none outside; 
+      border-right: 1px solid #aaa; 
+      display: inline; 
+    }
+    #footer ul li:last-child {
+      border-right: none;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="navbar navbar-fixed-top" id="navbar">
+    <a href="http://github.com/alecharp"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/"><span>Adrien Lecharpentier</span></a>
+        <ul class="nav">
+          {% include links-list.html %}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    {{ content }}
+
+    <footer class="footer" id="footer">
+      <div class="row-fluid" style="padding:10px 0 36px 0">
+        <hr/>
+        <p>
+          Great thanks to <a href="http://twitter.github.com/bootstrap/">Twitter bootstrap</a>
+           | 
+          Blog source code: <a href="https://github.com/alecharp/blog.lecharpentier.org">github.com/alecharp/blog.lecharpentier.org</a>
+          <br />
+          &copy; <span>Adrien Lecharpentier</span> 2012
+        </p>
+        <p>Last update: {{ site.time | date_to_string }}</p>
+      </div>
+    </footer>
+  </div>
+  
+  <script src="/js/jquery-1.7.2.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  
+  <!-- Google analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-11344673-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+</body>
+</html>
