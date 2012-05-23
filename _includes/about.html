@@ -3,7 +3,7 @@
   <ul class="thumbnails">
     <li>
       <a href="{{ page.author | gravatar_profile }}" class="thumbnail">
-        <img src="{{ page.author | gravatar_img }}?s=150&r=pg&d=mm" />
+        <img src="{{ page.author | gravatar_img }}?s=150&r=g&d=mm" />
       </a>
     </li>
   </ul>
@@ -13,7 +13,7 @@
     {% for contrib in page.contrib %}
       <li>
           <a href="{{ contrib | gravatar_profile }}" class="thumbnail">
-            <img src="{{ contrib | gravatar_img }}?s=50&r=pg&d=mm"
+            <img src="{{ contrib | gravatar_img }}?s=50&r=g&d=mm"
               alt="{{ contrib }}" />
           </a>
       </li>
