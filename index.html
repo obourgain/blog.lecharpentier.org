@@ -7,11 +7,12 @@ title: Adrien Lecharpentier's blog
   <div class="alert alert-warn">There is no article for the moment. Come back later..</div>
 {% else %}
   <div class="hero-unit">
-    {% assign header_limit = 50 %}
     <h1>{{ site.posts.first.title }}</h1>
-    {{ site.posts.first.content | truncatewords: header_limit }}
-    <br/>
-    <a class="btn btn-info btn-small" href="{{ site.posts.first.url }}">En savoir plus</a>
+    <p>
+      {{ site.posts.first.excerpt }}
+      <br/>
+      <a class="btn btn-info btn-small" href="{{ site.posts.first.url }}">En savoir plus</a>
+    </p>
   </div>
   {% assign posts_limit = 10 %}
   <h2>10 Derniers articles</h2>

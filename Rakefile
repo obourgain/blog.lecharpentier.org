@@ -14,6 +14,9 @@ task :new, :title do |t, args|
 layout: post
 title: #{args.title}
 date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
+author: #{`git config --get user.email`.strip.chomp}
+tags: misc
+excerpt:
 ---
 EOS
     end
