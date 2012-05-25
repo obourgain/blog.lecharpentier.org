@@ -64,6 +64,17 @@
         <ul class="nav">
           {% include links-list.html %}
         </ul>
+        <div class="nav-collapse">
+          <form class="form-search navbar-search pull-right" 
+              action="http://www.google.com/search" method="get">
+            <input type="hidden" value="UTF-8" name="ie" />
+            <input type="hidden" value="UTF-8" name="oe" />
+            <input type="hidden" value="blog.lecharpentier.org" name="domains" />
+            <input type="hidden" value="blog.lecharpentier.org" name="sitesearch" />
+            <input type="text" name="q" placeholder="Rechercher avec Google"
+                class="search-query span2">
+          </form>
+        </div>
       </div>
     </div>
   </div>
