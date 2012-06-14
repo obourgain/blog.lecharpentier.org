@@ -21,7 +21,8 @@ title: Adrien Lecharpentier's blog
   {% for post in site.posts limit:posts_limit offset: 1 %}
       <tr>
         <td>
-          {{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+          {{ post.date | date: "%d/%m/%Y" }}</span> <i class="icon-chevron-right"></i>
+          <a href="{{ post.url }}">{{ post.title }}</a>
           {% if post.tags != empty %}
           <div class="pull-right">
             {% for it in post.tags %}
