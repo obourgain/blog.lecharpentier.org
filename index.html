@@ -14,11 +14,10 @@ title: Adrien Lecharpentier's blog
       <a class="btn btn-info btn-small" href="{{ site.posts.first.url }}">En savoir plus</a>
     </p>
   </div>
-  {% assign posts_limit = 10 %}
-  <h2>10 Derniers articles</h2>
+  <h2>Les articles</h2>
   <table class="table table-striped">
     <tbody>
-  {% for post in site.posts limit:posts_limit offset: 1 %}
+  {% for post in paginator.posts %}
       <tr>
         <td>
           {{ post.date | date: "%d/%m/%Y" }}</span> <i class="icon-chevron-right"></i>
@@ -32,9 +31,41 @@ title: Adrien Lecharpentier's blog
           {% endif %}
       </tr>
   {% endfor %}
-  {% if site.posts.size >= posts_limit | plus:'1' %}
-    <tr><td><a href="/archives.html">..Les autres sont là..</a></td></tr>
-  {% endif %}
     </tbody>
   </table>
+  {% if paginator.total_pages != 1 %}
+    <div class="pagination pagination-centered">
+      <ul>
+        <li class="{% if paginator.page == 1 %}disabled{% endif%}">
+          <a href="/" class="">«</a>
+        </li>
+        <li class="{% if paginator.page == 1 %}disabled{% endif%}">
+          <a href="/{%if paginator.previous_page != 1 %}page{{paginator.previous_page}}{% endif %}">
+            {%if paginator.previous_page %}
+              {{paginator.previous_page}}
+            {% else %}
+              1
+            {% endif %}
+          </a>
+        </li>
+        {% if paginator.previous_page and paginator.next_page %}
+          <li class="active">
+            <a href="#">{{paginator.page}}</a>
+          </li>
+        {% endif %}
+        <li class="{% if paginator.page == paginator.total_pages %}disabled{% endif%}">
+          <a href="/page{{paginator.next_page}}">
+            {%if paginator.next_page %}
+              {{paginator.next_page}}
+            {% else %}
+              {{paginator.total_pages}}
+            {% endif %}
+          </a>
+        </li>
+        <li class="{% if paginator.page == paginator.total_pages %}disabled{% endif%}">
+          <a href="/page{{paginator.total_pages}}">»</a>
+        </li>
+      </ul>
+    </div>
+  {% endif %}
 {% endif %}

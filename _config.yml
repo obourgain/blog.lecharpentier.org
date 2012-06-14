@@ -17,3 +17,5 @@ exclude: [README.md, Rakefile]
 socialize: "true"
 socialize_twitter: "alecharp"
 socialize_github: "alecharp"
+
+paginate: 10
