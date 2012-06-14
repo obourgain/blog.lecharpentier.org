@@ -11,9 +11,11 @@
   <link rel="stylesheet" href="/css/bootstrap-responsive.min.css" type="text/css" />
   <!-- syntax hightlight CSS -->
   <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+  <!-- custom css -->
+  <link rel="stylesheet" href="/css/custom.css" type="text/css" />
 
   <style>
-    body { padding-top: 60px; }
+    body { padding-top: 50px; }
     #footer { 
       text-align: center; 
       color: #aaa; 
@@ -61,9 +63,9 @@
           <span class="icon-bar"></span>
         </a>
         <a class="brand" href="/"><span>Adrien Lecharpentier</span></a>
-        <ul class="nav">
+        <!--<ul class="nav">
           {% include links-list.html %}
-        </ul>
+        </ul>-->
         <div class="nav-collapse">
           <form class="form-search navbar-search pull-right" 
               action="http://www.google.com/search" method="get">
@@ -80,7 +82,21 @@
   </div>
 
   <div class="container-fluid">
-    {{ content }}
+    <div class="row-fluid">
+      <div class="span1">
+        <section class="sidebar">
+          <ul>
+            {% include links-list.html %}
+          </ul>
+        </section>
+      </div>
+      <div class="span6">
+        {{ content }}
+        <p class="pull-right">
+          <a href="#"><i class="icon-chevron-up"></i> Back to top</a>
+        </p>
+      </div>
+    </div>
 
     <footer class="footer" id="footer">
       <div class="row-fluid" style="padding:10px 0 36px 0">

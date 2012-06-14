@@ -1,0 +1,5 @@
+section.sidebar {position:fixed;font-family: Helvetica, sans-serif;}
+section.sidebar ul{list-style:none;margin-left: -20px;}
+section.sidebar ul li{margin-bottom: 7px;}
+section.sidebar ul li a{text-decoration: none;font-weight: bold;color:white;padding:3px 5px;background-color:black}
+section.sidebar ul li a:hover{color:#ccc;}

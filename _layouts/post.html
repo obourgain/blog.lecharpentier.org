@@ -1,22 +1,24 @@
 ---
 layout: base
 ---
-<div class="row-fluid">
+<!--<div class="row-fluid">
   <div class="span2"></div>
-  <div class="span6">
+  <div class="span6 author">-->
     <div class="row">
-      <a href="/">&larr; Back to home page</a>
+      <a href="/"><i class="icon-chevron-left"></i> Back to home page</a>
     </div>
     <div class="page-header">
       <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
-      <h6>published {% if page.date %}on {{ page.date | date_to_long_string }} @ {{ page.date | date: '%H:%M:%S' }}{% endif %}</h6>
+      <h6>{{ page.date | date: "%B %e, %Y" }}</h6>
 
     </div>
     <div style="text-align: justify">
       {{ content }}
     </div>
+    
+    <hr/>
 
-    <div class="row well" style="margin-top: 30px">
+    <div class="row well">
       <p class="pull-right">
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="alecharp" data-lang="fr">Tweeter</a>
         <br/>
@@ -33,15 +35,16 @@ layout: base
       <p>
         <a href="{{page.url}}">Permalink</a> | <a href="#disqus_thread">Commentaires</a>
       </p>
+      
+      <p>
+        <a href="#"><i class="icon-chevron-up"></i> Back to top</a>
+      </p>
     </div>
-
-    <div id="disqus_thread" style="margin-top: 15px"></div>
     
-    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-    </p>
-    
+    <div class="row">
+      <div id="disqus_thread" style="margin-top: 15px"></div>
+      <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
     <!-- les scripts -->
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     
@@ -70,9 +73,11 @@ layout: base
       })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
+  <!--</div>
   <div class="span3">
-    {% include about.html %}
+    <div class="author-content">
+      {% include about.html %}
+    </div>
   </div>
-</div>
+</div>-->
 
