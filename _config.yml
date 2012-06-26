@@ -12,6 +12,7 @@ rdiscount
   extensions: [smart]
 pygments: true
 
+include: [.htaccess]
 exclude: [README.md, Rakefile]
 
 socialize: "true"
