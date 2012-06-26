@@ -13,7 +13,7 @@ rdiscount
 pygments: true
 
 include: [.htaccess]
-exclude: [README.md, Rakefile]
+exclude: [README.md, LICENSE, Rakefile]
 
 socialize: "true"
 socialize_twitter: "alecharp"
