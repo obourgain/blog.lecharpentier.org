@@ -3,10 +3,15 @@ layout: default
 title: Adrien Lecharpentier's blog
 ---
 
+<div class="page-header">
+  <h2>Les articles publiés</h2>
+</div>
+
+<div class="well">
 {% if site.posts == empty %}
   <div class="alert alert-warn">There is no article for the moment. Come back later..</div>
 {% else %}
-  <table class="table">
+  <table class="table table-condensed">
     <tbody>
   {% for post in paginator.posts %}
       <tr>
@@ -56,3 +61,4 @@ title: Adrien Lecharpentier's blog
     </div>
   {% endif %}
 {% endif %}
+</div>
