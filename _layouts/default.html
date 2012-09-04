@@ -51,8 +51,8 @@
 
 </head>
 <body>
-  <div class="navbar navbar-fixed-top" id="navbar">
-    <a href="http://github.com/alecharp"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+  <div class="navbar navbar-fixed-top .navbar-inverse" id="navbar">
+    <a href="http://github.com/alecharp"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
     <div class="navbar-inner">
       <div class="container">
         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -61,9 +61,6 @@
           <span class="icon-bar"></span>
         </a>
         <a class="brand" href="/"><span>Adrien Lecharpentier</span></a>
-        <!--<ul class="nav">
-          {% include links-list.html %}
-        </ul>-->
         <div class="nav-collapse">
           <form class="form-search navbar-search"
               action="http://www.google.com/search" method="get">
@@ -81,14 +78,13 @@
 
   <div class="container-fluid">
     <div class="row-fluid">
+      <div class="span1"></div>
       <div class="span2">
-        <section class="well">
-          <ul class="nav nav-list">
-            {% include links-list.html %}
-          </ul>
-        </section>
+        <ul class="nav nav-list affix">
+          {% include links-list.html %}
+        </ul>
       </div>
-      <div class="span6">
+      <div class="span8">
         {{ content }}
         <p class="pull-right">
           <a href="#"><i class="icon-chevron-up"></i> Back to top</a>
