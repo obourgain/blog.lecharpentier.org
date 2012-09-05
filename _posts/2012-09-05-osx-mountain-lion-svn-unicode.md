@@ -93,3 +93,14 @@ installe les commandes dans `/usr/local/bin` mais la commande que j'utilisais
 
 *: 2 problèmes déjà, svn et fichier binaire donc on oublie les diffs et les
 merges!
+
+## Edit
+On me fait signe de la main que le problème vient tout simplement du choix
+d'implémetation de l'UTF8 par MacOS qui est différent de Linux et Windows (qui
+eux ont la même).
+
+Et petite chose encore, j'ai voulu, pour satisfaire ma fainéantise, installer
+un client graphique (svnX0 pour gérer ma copie du repository. Mauvaise idée:
+certains (oui certains, pas tous) fichiers sont retournés dans l'état "non
+synchronisé - manquant" du début de l'article. Je sens que la guerre de l'UTF8
+est loin d'être finie.
