@@ -1,4 +1,4 @@
-title: alecharp's blog
+title: Alecharp's blog
 author: Adrien Lecharpentier
 email: "adrien.lecharpentier@gmail.com"
 
@@ -14,9 +14,5 @@ pygments: true
 
 include: [.htaccess]
 exclude: [README.md, LICENSE, Rakefile]
-
-socialize: "true"
-socialize_twitter: "alecharp"
-socialize_github: "alecharp"
 
 paginate: 50
