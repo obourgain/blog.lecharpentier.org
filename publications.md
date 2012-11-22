@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Adrien Lecharpentier's blog
 ---
 
