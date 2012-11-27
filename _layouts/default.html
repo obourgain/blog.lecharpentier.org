@@ -7,12 +7,20 @@
   <link href="/atom.xml" rel="alternate" title="Adrien Lecharpentier's blog ATOM" type="application/atom+xml" />
 
   <!-- twitter CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
-  <link rel="stylesheet" href="/css/bootstrap-responsive.min.css" type="text/css" />
+  <link rel="stylesheet" href="/resources/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="/resources/css/bootstrap-responsive.min.css" type="text/css" />
   <!-- syntax hightlight CSS -->
-  <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+  <link rel="stylesheet" href="/resources/css/syntax.css" type="text/css" />
+  <!-- fonts -->
+  <link rel="stylesheet" type="text/css" href="/resources/css/font-awesome.css">
 
-  <style>
+  <style>    
+    @font-face {
+      font-family: Inconsolata;
+      src: url('/resources/font/Inconsolata.otf');
+    } 
+    code { font-family: Inconsolata; font-size: 14px;}
+
     * {
       margin: 0;
     }
@@ -44,10 +52,6 @@
       font-weight: bold;
       color: #aaa;
     }
-    img.mini {
-      max-height: 150px;
-      max-width: 150px;
-    }
   </style>
 
 </head>
@@ -59,6 +63,7 @@
           <li {% if page.url == '/index.html' %} class="active" {% endif %}><a href="/">Home</a></li>
           <li {% if page.url == '/blog/' %} class="active" {% endif %}><a href="/blog/">Blog</a></li>
           <li {% if page.url == '/publications/' %} class="active" {% endif %}><a href="/publications/">Publication</a></li>
+          <li><a href="/atom.xml"><i class="icon-rss icon-large"></i>RSS</a></li>
         </ul>
         <h3 class="muted">{{ site.author }}</h3>
       </div>
@@ -77,13 +82,18 @@
         © <span>Adrien Lecharpentier</span> 2012
       </p>
       <p class="muted">
+        <a href="https://github.com/alecharp" target="_blank"><i class="icon-github-sign icon-large"></i></a>
+        <a href="https://twitter.com/alecharp" target="_blank"><i class="icon-twitter-sign icon-large"></i></a>
+        <a href="http://www.linkedin.com/in/alecharp" target="_blank"><i class="icon-linkedin-sign icon-large"></i></a>
+      </p>
+      <p class="muted">
         Last update: {{ site.time | date_to_long_string }}
       </p>
     </div>
   </div>
   
   <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
+  <script src="/resources/js/bootstrap.min.js"></script>
   
   <!-- Google analytics -->
   <script type="text/javascript">

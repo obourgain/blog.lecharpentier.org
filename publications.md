@@ -7,7 +7,7 @@ title: Adrien Lecharpentier's blog
   Voici la liste des publications que j'ai pu réaliser en dehors de ce blog.
 </p>
 
-<p class="lead">Présenatations:</p>
+<p class="lead">Présentations:</p>
 <ul>
 </ul>
 
