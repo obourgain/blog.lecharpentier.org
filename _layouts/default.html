@@ -31,7 +31,7 @@
       min-height: 100%;
       height: auto !important;
       height: 100%;
-      margin: 0 auto -110px; /* the bottom margin is the negative value of the footer's height */
+      margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
     }
     .footer, .push {
       height: 100px; /* .push must be the same height as .footer */
@@ -52,6 +52,17 @@
       font-weight: bold;
       color: #aaa;
     }
+    .dl-horizontal dt {
+      white-space: normal !important;
+      width: 240px !important;
+    }
+
+    .dl-horizontal dd {
+      margin-left: 260px;
+    }
+    section {
+      margin-bottom: 50px;
+    }
   </style>
 
 </head>
@@ -63,12 +74,17 @@
           <li {% if page.url == '/index.html' %} class="active" {% endif %}><a href="/">Home</a></li>
           <li {% if page.url == '/blog/' %} class="active" {% endif %}><a href="/blog/">Blog</a></li>
           <li {% if page.url == '/publications/' %} class="active" {% endif %}><a href="/publications/">Publication</a></li>
+          <li {% if page.url == '/cv/' %} class="active" {% endif %}><a href="/cv/">CV</a></li>
           <li><a href="/atom.xml"><i class="icon-rss icon-large"></i>RSS</a></li>
         </ul>
         <h3 class="muted">{{ site.author }}</h3>
       </div>
       <hr/>
-      {{ content }}
+      <div class="container-fluid">
+        <div class="row-fluid">
+          {{ content }}
+        </div>
+      </div>
     </div>
     <div class="push"></div>
   </div>
