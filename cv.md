@@ -49,7 +49,7 @@ layout: page
 			<dt>Serveurs d'applications &<br /> Serveurs Web</dt>
 			<dd>
 				<span class="label label-info">Tomcat</span><br/>
-				<span class="label label-info">Appahce HTTP</span>
+				<span class="label label-info">Apache HTTP</span>
 			</dd>
 		</dl>
 		<dl class="dl-horizontal">
