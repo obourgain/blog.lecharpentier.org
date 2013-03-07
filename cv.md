@@ -146,7 +146,7 @@ layout: page
 			</div>
 		</div>
 		<div class="row">
-			<div class="span2" style="text-align:center"><img src="http://www.ekino.com/images/logo.png" alt="Ekino" /></div>
+			<div class="span2" style="text-align:center"><img src="http://www.ekino.com/wp-content/themes/ekino/images/logo.png" alt="Ekino" /></div>
 			<div class="span10">
 				<p>
 					<span class="lead">Développement JEE Spring / Hibernate / Struts 2</span><br/>
@@ -179,7 +179,7 @@ layout: page
 			</div>
 		</div>
 		<div class="row">
-			<div class="span2" style="text-align:center"><img src="http://www.ekino.com/images/logo.png" alt="Ekino" /></div>
+			<div class="span2" style="text-align:center"><img src="http://www.ekino.com/wp-content/themes/ekino/images/logo.png" alt="Ekino" /></div>
 			<div class="span10">
 				<p>
 					<span class="lead">Sécurisation plateforme intégration continue</span><br/>
