@@ -106,6 +106,14 @@ layout: page
 					<ul>
 						<li>Mise en place d'outils de la structure</li>
 						<li>Définition des procédures de supports</li>
+						<li>Développement d'une plateforme d'analyse du traitement des tickets pour la cellule.</li>
+						<li>Correction de fonctionnalité sur des projets open-source</li>
+					</ul>
+				</p>
+				<p>
+					Patch effectué
+					<ul>
+						<li>Liferay : <a href="http://issues.liferay.com/browse/AUI-816" target="_blank">AUI-816</a></li>
 					</ul>
 				</p>
 				<p>
@@ -114,6 +122,10 @@ layout: page
 					<span class="label label-info">Alfresco</span>
 					<span class="label label-info">OpenStack</span>
 					<span class="label label-info">LibreOffice</span>
+					<span class="label label-info">Spring-mvc</span>
+					<span class="label label-info">Spring-batch</span>
+					<span class="label label-info">Twitter bootstrap</span>
+					<span class="label label-info">AngularJS</span>
 				</p>
 			</div>
 		</div>
