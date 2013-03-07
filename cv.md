@@ -57,6 +57,7 @@ layout: page
 			<dd>
 				<span class="label label-info">MySQL</span>
 				<span class="label label-info">Oracle</span>
+				<span class="label label-info">MongoDB</span>
 			</dd>
 		</dl>
 		<dl class="dl-horizontal">
@@ -154,6 +155,9 @@ layout: page
 					<span class="label label-info">Struts</span>
 					<span class="label label-info">JQuery</span>
 					<span class="label label-info">Twitter Bootstrap</span>
+					<span class="label label-info">KnockoutJS</span>
+					<span class="label label-info">Sammy.JS</span>
+					<span class="label label-info">RequireJS</span>
 				</p>
 			</div>
 		</div>
