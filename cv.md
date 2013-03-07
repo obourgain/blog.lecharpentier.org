@@ -309,7 +309,7 @@ layout: page
 	</section>
 
 	<section id="form">
-		<h1 clas="page-header">Formations</h1>
+		<h1 class="page-header">Formations</h1>
 		<div class="row">
 			<div class="span2 lead">2008 - 2011</div>
 			<div class="span10">
@@ -325,5 +325,4 @@ layout: page
 			</div>
 		</div>
 	</section>
-
 </div>
