@@ -13,27 +13,9 @@ layout: default
     
     <hr/>
 
-    <div class="row well">
-      <p class="pull-right">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-via="alecharp" data-lang="fr">Tweeter</a>
-        <br/>
-        <g:plusone size="medium"></g:plusone>
-      </p>  
-      {% if page.tags != empty %}
-      <p style="max-width: 80%;">
-      <i class="icon-tags"></i> Tags: 
-        {% for tag in page.tags %}
-        <span class="label label-info"><i class="icon-tag icon-white"></i> {{ tag }}</span>
-        {% endfor %}
-      </p>
-      {% endif %}
-      <p>
-        <a href="{{page.url}}">Permalink</a> | <a href="#disqus_thread">Commentaires</a>
-      </p>
-      
-      <p>
-        <a href="#"><i class="icon-chevron-up"></i> Back to top</a>
-      </p>
+    <div class="row">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="alecharp" data-lang="fr">Tweeter</a>
+      <g:plusone size="medium"></g:plusone>
     </div>
     
     <div class="row">
