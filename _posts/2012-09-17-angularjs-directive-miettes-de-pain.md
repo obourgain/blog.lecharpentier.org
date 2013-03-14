@@ -5,6 +5,7 @@ date: 2012-09-17 14:38:39
 author: adrien.lecharpentier@gmail.com
 tags: dev angularjs directive
 excerpt: Ma première directive avec angularJS
+img: http://angularjs.org/img/AngularJS-large.png
 ---
 
 Dans un blog précédent, j'ai fait une petite critique à AngularJS. Ici je vais

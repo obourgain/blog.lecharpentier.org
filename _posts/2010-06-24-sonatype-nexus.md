@@ -7,6 +7,7 @@ tags: nexus sonatype maven-repository-manager installation
 excerpt: Nexus de Sonatype. Partage de connaissance sur un maven 
   repositories manager, Nexus. Explication, installation, configuration
   et fonctionnement.
+img: http://www.sonatype.com/people/wp-content/uploads/2010/01/nexus-small.png
 ---
 
 Depuis quelques temps, j'utilise *Nexus* de Sonatype pour certain

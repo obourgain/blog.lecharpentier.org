@@ -5,6 +5,7 @@ date: 2012-09-16 18:56:14
 author: adrien.lecharpentier@gmail.com
 tags: dev apache archiva personnel
 excerpt:
+img: http://archiva.apache.org/images/archiva.png
 ---
 
 Après quelques patches sur la nouvelle interface web de [Archiva][1] ainsi que sur

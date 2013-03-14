@@ -7,6 +7,7 @@ tags: maven linux bash function enhancer dev
 excerpt: Parfois commencer un project c'est long et embêtant car il
   faut commencer par créer la structure du project selon maven. 
   Comment peut-on le faire rapidement?
+img: http://maven.apache.org/images/maven-logo-2.gif
 ---
 
 Aujourd'hui, on utilise beaucoup maven dans le développement, surtout

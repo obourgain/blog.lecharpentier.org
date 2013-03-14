@@ -6,6 +6,7 @@ author: adrien.lecharpentier@gmail.com
 tags: misc mac brew install svn unicode
 excerpt: Utiliser Subversion sur une Mac avec support des chemins
   unicode
+img: http://images.apple.com/euro/osx/images/overview_hero1_title_2x.png
 ---
 
 Dans l'univers impitoyable de Mac OS, je demande le support de l'unicode sur

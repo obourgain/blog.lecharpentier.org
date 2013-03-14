@@ -5,6 +5,7 @@ date: 2012-08-20 23:10:43
 author: adrien.lecharpentier@gmail.com
 tags: dev js angularjs
 excerpt: petite expérience sur angularJS
+img: http://angularjs.org/img/AngularJS-large.png
 ---
 
 Il y a peu, un collègue ([Olivier Croisier])
