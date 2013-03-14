@@ -14,5 +14,3 @@ pygments: true
 
 include: [.htaccess]
 exclude: [README.md, LICENSE, Rakefile]
-
-paginate: 50
