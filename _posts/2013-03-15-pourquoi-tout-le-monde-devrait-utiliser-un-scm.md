@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pourquoi tout le monde devrait utiliser un SCM
-date: 2012-11-14 10:20:03
+date: 2013-03-15 16:00:00
 author: adrien.lecharpentier@gmail.com
 tags: misc scm git svn bazaar mercurial
 img: http://git-scm.com/images/logo@2x.png
