@@ -13,7 +13,7 @@ Il s'agit là d'un point de vue que je défends depuis quelques temps mais il es
 Donc <span class="lead">Pourquoi tout le monde ~~veut devenir un cat~~ devrait utiliser un SCM?</span> <small>car […] [il] retombe toujours sur ses pattes!</small>
 
 # Définition: un SCM c'est quoi?
-Donc pour ce qui ne connaissent pas le terme, SCM pour _Source Code Manager_. Il est question d'un outil permettant de gérer du code source. Le point de cet article est de montrer que le _code_ peut en fait être n'importe quoi.
+Donc pour ce qui ne connaissent pas le terme, SCM pour _Source and Configuration Manager_. Il est question d'un outil permettant de gérer du code source. Le point de cet article est de montrer que le _source_ peut en fait être n'importe quoi.
 
 Quand on dit "_gérer_ du code source", on veut dire être capable de garder des versions de ce code dans le temps et ainsi savoir qui a fait quoi sur quelle ligne du fichier. Cela permet également de travailler à plusieurs sur le même projet de manière plus rapide. 
 
