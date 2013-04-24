@@ -11,7 +11,7 @@ img: http://archiva.apache.org/images/archiva.png
 Après quelques patches sur la nouvelle interface web de [Archiva][1] ainsi que sur
 le [site web de l'outil][2], les commiters du projet m'ont accepté parmis eux.
 
-# Un grand merci à eux!
+## Un grand merci à eux!
 
 Liste non exhaustive des commiters du projet (non triée):
 
@@ -33,7 +33,7 @@ Pour la liste complète c'est par [ici][4]
 Je vais donc maintenant mettre mon temps (le plus possible!) afin d'apporter à
 cet outil de nouvelles fonctionnalitées.
 
-# Choses à voir
+## Choses à voir
 Je vous invite très largement à regarder Archiva, sa nouvelle interface
 graphique mais aussi les blogs qui y sont liés. Ils sont tous ou la plus grande
 majorité fait par [Olivier Lamy][3].

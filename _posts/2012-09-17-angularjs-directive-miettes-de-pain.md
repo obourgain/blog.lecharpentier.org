@@ -12,7 +12,7 @@ Dans un blog précédent, j'ai fait une petite critique à AngularJS. Ici je vai
 montrer comment j'ai créé un breadcrumb avec AngularJS en étandant un petit peu
 sont comportement et sa configuration. Sans trop me prendre la tête.
 
-# But
+## But
 Mon application (pour le moment) est en mode "one-page application": un html
 `index.html`, hormis les templates. Cependant, je veux pouvoir revenir
 simplement sur la page "précédente", de la logique de mes pages.
@@ -24,7 +24,7 @@ revenir simplement sur la liste de mes évènements.
 
 Simple et plutôt jolie.
 
-# Choix
+## Choix
 On peut faire à la main, dans chaque template, mettre notre breadcrumb. C'est
 moche et pas vraiment maintenable.
 
@@ -32,7 +32,7 @@ L'autre possibilité est d'utiliser la configuration des routes et de faire un
 mapping pour construire. C'est moins simple, à première vue, mais plus
 maintenable et extensible.
 
-# Configuration
+## Configuration
 Le mieux serait alors de mettre dans la configuration des routes les textes que
 l'on veut voir dans notre breadcrumb. Ainsi on a en un clin d'oeil l'URL de la
 page, son template AINSI que le texte à afficher. Ça serai pas mal ça.
@@ -66,7 +66,7 @@ que j'ai mis du texte mais également des images.
 
 Maintenant, comment on met ça en forme?
 
-# Le template
+## Le template
 Pas très compliqué, une simple liste pour afficher notre liste successive de
 page. Ici, grand fan de Twitter Bootstrap oblige, j'utilise la classe
 `breadcrumb` du framework.
@@ -76,7 +76,7 @@ page. Ici, grand fan de Twitter Bootstrap oblige, j'utilise la classe
       </ul>
     </div>
 
-# Création d'une directive
+## Création d'une directive
 Avec AngularJS, on peut créer des directives. Dixit la documentation, une
 directive est le _seul_ emplacement dans lequel on peut toucher au DOM d'une
 page. Comme c'est ce que l'on veut faire, c'est la bonne place.
@@ -144,7 +144,7 @@ regarde si ça match une de mes routes avec la fonction
 
 Simple, gourmant mais fonctionnel.
 
-# Mais..
+## Mais..
 Il y a un __gros__ mais. Certaine de vos routes peuvent avoir des paramètres:
 un id, un nom, etc. Soucis, la fonction `hasOwnProperty` ne match pas les
 paramètre. Donc il n'est pas possible d'utiliser ma solution avec ces urls

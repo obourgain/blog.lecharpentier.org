@@ -13,7 +13,7 @@ possible.
 
 ***
 
-# Maven
+## Maven
 Maven est un outil de build/gestion de dépendance très utilisé dans le développement
 surtout web/JEE. Il est bien intégré aux différents IDEs disponible mais on se 
 retrouve souvent à faire des lignes de commandes pour compiler, test, packager 
@@ -58,12 +58,12 @@ anciennes versions du fichiers sont stockées avec le timestamp de la mise à jo
 
 *** 
 
-# GIT
+## GIT
 Si vous avez la chance de travailler avec GIT, ou que vous allez vous y mettre,
 un certain nombres de choses peuvent vous simplifier la vie. Pour commencer, je ne
 saurai trop vous conseiller de ne pas utiliser Windows avec GIT. Mais bon..
 
-## Une bonne ligne de commande
+### Une bonne ligne de commande
 Pour utiliser toute la puissance de GIT, il vous faut une ligne de commande. C'est
 un plus. Afin de travailler plus vite avec votre ligne de commande, que vous y 
 soyez habitué ou non, je vous conseille d'aller faire un tour [ici](http://gitfr.net/blog/2010/11/06/ameliorer-sa-productivite-avec-un-beau-shell/).
@@ -128,7 +128,7 @@ GIT_PS1_SHOWUPSTREAM="git verbose"
 ne pas suivre si on utilise aussi *git-svn*. Et `verbose` pour avoir un compteur 
 de modification non pusher par rapport à la branche distante.
 
-## Quelques aliases
+### Quelques aliases
 Si vous venez de *svn*, vous devez savoir que `svn ci` et `svn commit` est exactement
 la même commande. Pour *git*, ça ne fonctionne pas comme ça. Il vous faut définir les 
 aliases que vous souhaitez utiliser. Pas très compliqué:
@@ -168,7 +168,7 @@ devriez trouver un certain nombre d'exemple.
 
 ***
 
-# Annexes
+## Annexes
 ## Annexe 1 : truncate pwd <a id="annexe-1"></a>
 Merci à Sébastien Douche pour ça!
 {% highlight bash %}
@@ -184,6 +184,6 @@ function truncate_pwd {
 
 ***
 
-# Links
+## Links
  - Maven: [http://maven.apache.org](http://maven.apache.org)
  - \#gitfr.net: [http://gitfr.net/blog](http://gitfr.net/blog)

@@ -7,8 +7,7 @@ tags: nexus sonatype maven-repository-manager installation
 excerpt: Nexus de Sonatype. Partage de connaissance sur un maven 
   repositories manager, Nexus. Explication, installation, configuration
   et fonctionnement.
-img: http://www.sonatype.com/people/wp-content/uploads/2010/01/nexus-small.png
----
+ ---
 
 Depuis quelques temps, j'utilise *Nexus* de Sonatype pour certain
  développement perso ou pro. Comme je trouve ce produit très simple, 
@@ -23,7 +22,7 @@ puis de la configuration de ce serveur pour une utilisation classique,
 en vous expliquant les personnalisations possibles du serveur. Pour 
 finir, je montrerai le fonctionnement du serveur à l'usage.
 
-# Avant propos
+## Avant propos
 *Nexus* est un <strong>*M*</strong>*aven 
 <strong>R</strong>epository <strong>M</strong>anager*. Il permet de 
 gérer les artefacts qui sont disposés grâce à Maven (ou maven-ant-tasks 
@@ -43,7 +42,7 @@ Un certain nombre de question ne sont pas abordées soit parce que je
 n'ai pas de réponse soit parce que je n'ai pas les questions :). Alors 
 posez-les et nous verrons bien ce que nous pourrons faire..
 
-# Installation
+## Installation
 Tout d'abord, commençons par parler de l'installation.
 
 Comme la plupart des produits "serveur" de nos jours, il est disponible 
@@ -110,7 +109,7 @@ sécurisé vers le port sécurisé...) dans le dossier
 *${nexus-home}/nexus-*<version>*/conf/examples/*. Ces configurations se 
 font dans le fichier *jetty.conf*.
 
-# Configuration
+## Configuration
 Quelque soit la version que vous ayez choisie, la configuration de nexus
 (pas du service) est la même et est assez simple.
 
@@ -201,9 +200,9 @@ Il est possible de se passer de groupe, mais l'écriture du fichier
 >de repositories dans le cas où certains groupes de développeurs n'ont 
 >pas besoin de tous les repositories de leurs voisins..
 
-# Fonctionnement
-## La recherche d'artefacts
-## *settings.xml*
+## Fonctionnement
+### La recherche d'artefacts
+### *settings.xml*
 Il est maintenant nécessaire de créer un *settings.xml* pour que les 
 développeurs puissent utiliser le service que vous venez de mettre en 
 place. Ce fichier permet en effet de spécifier à Maven où il doit 
@@ -313,7 +312,7 @@ la commande maven suivante pour déployer votre livrable:
 >*Je vais sûrement faire un article sur le sujet de Maven un de ces 
 >jours, je reviendrai sur l'utilisation de Maven à ce moment là.*
 
-# Conclusion
+## Conclusion
 Comme nous avons pu le voir, l'installation et la configuration (de 
 base) de *Nexus* n'est pas une tâche très complexe.
 
@@ -322,7 +321,7 @@ Intégration Continue mais pas forcément essentiel, puisque ce principe
 de fonctionnement ne s'applique pas seulement au projet maven ni 
 uniquement au projet java...
 
-# Références
+## Références
  - [Le post d'Arnaud Héritier sur son blog](http://blog.aheritier.net/from-apache-archiva-to-sonatype-nexus/)
  concernant la comparaison entre Archiva et Nexus et le passage du premier au second.
  - [Le site de Sonatype Nexus](http://nexus.sonatype.org/)
