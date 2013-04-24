@@ -2,12 +2,14 @@
 layout: default
 ---
 
-    <div class="page-header">
-      <h1>{{ page.title }}</h1>
-      <h6 class="muted">{{ page.date | date: "%B %e, %Y" }}</h6>
-    </div>
+  <div class="span2">
+    <h6 class="muted pull-right">{{ page.date | date: "%B %e, %Y" }}</h6>
+  </div>
 
-    <div style="text-align: justify">
+  <div class="span8" id="post">
+    <h1>{{ page.title }}</h1>
+
+    <div>
       {{ content }}
     </div>
     
@@ -51,3 +53,4 @@ layout: default
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
+  </div>

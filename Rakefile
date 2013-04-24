@@ -3,6 +3,11 @@ task :dev do
   system('jekyll --server --auto --future')
 end
 
+desc 'Generating CSS'
+task :css do
+	system('scss resources/css/*.scss resources/css/alecharp.css --style compressed')
+end
+
 desc "Given a title as an argument, create a new post file"
 task :new, :title do |t, args|
   filename = "#{Time.now.strftime('%Y-%m-%d')}-#{args.title.gsub(/\s/, '-').downcase}.md"

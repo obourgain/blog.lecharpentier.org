@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-<div class="row" data-spy="scroll" data-target="#navbarCV">
+<div class="row" data-spy="scroll" data-target="#navbarCV" id="resume">
 	<section id="comp">
 		<h1 class="page-header">Compétences</h1>
 		<dl class="dl-horizontal">
