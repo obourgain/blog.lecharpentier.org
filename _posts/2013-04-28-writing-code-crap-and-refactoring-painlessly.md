@@ -7,7 +7,7 @@ tags: dev
 excerpt:
 ---
 
-Quand on écrit du code, il y a deux choses de mon points de vues qui peuvent nous conduire à l'auto-censure:
+Quand on écrit du code, il y a deux choses de mon point de vue qui peuvent nous conduire à l'auto-censure:
 
  - ne pas savoir écrire du code
  - penser qu'on ne sait pas écrire du code propre
@@ -36,11 +36,11 @@ Dans tous les cas, certains outils et bonnes pratiques pourront vous aidez sur l
 
 Imaginons que vous souhaitez mettre en place un système qui va vous permettre de discuter (grosse simplification de mon cas pratique), mais comme vous êtes gentil, vous pensez aux étrangers. 
 
-Le code final sera surement un peu over-designed par rapport au cas d'utilisation que j'ai décris mais l'important dans un voyage c'est pas la destination mais le chemin pour y parvenir.
+Le code final sera surement un peu over-designed par rapport au cas d'utilisation que j'ai décris mais l'important dans un voyage ce n'est pas la destination mais le chemin pour y parvenir.
 
 ### Étape 1 : simple, efficace
 
-On commence le code:
+On commence le code :
 {% highlight java %}
 public class Main {
 	public static void main(String[] argv) {
@@ -51,7 +51,7 @@ public class Main {
 
 ### Étape 2 : tests
 
-On va dire que l'on veut pouvoir tester notre message afficher simplement, donc on revoit notre copie pour avoir une classe `NiceGuy` pour nous aider:
+On va dire que l'on veut pouvoir tester notre message affiché simplement, donc on revoit notre copie pour avoir une classe `NiceGuy` pour nous aider :
 
 {% highlight java %}
 public class NiceGuy {
@@ -61,7 +61,7 @@ public class NiceGuy {
 }
 {% endhighlight %}
 
-On écrit donc notre test, ainsi nous aurons un état que nous pourrons valider et ainsi éviter de contrarier le bon fonctionnement lorsque nous ferons évoluer notre application.
+On écrit donc notre test, ainsi nous aurons un état que nous pourrons valider et ainsi éviter de contrarier le bon fonctionnement lorsque nous ferons évoluer notre application :
 
 {% highlight java %}
 public class NiceGuyTest {
@@ -88,7 +88,7 @@ public class Main {
 
 ### Étape 3 : "parle-moi comme je parle"
 
-Bon on veut plusieurs langues possible à partir d'un argument de la ligne de commande:
+Bon, on veut plusieurs langues possible à partir d'un argument de la ligne de commande :
 
 {% highlight java %}
 public class Main {
@@ -116,7 +116,7 @@ public class NiceGuy {
 }
 {% endhighlight %}
 	
-Là, notre test nous dit que tout va bien. Cool, nous avons donc améliorer le code sans régression. Mais testons un peu plus.
+Là, notre test nous dit que tout va bien. Cool, nous avons donc améliorer le code sans régression. Mais testons un peu plus :
 
 {% highlight java %}
 public class NiceGuyTest {
@@ -144,7 +144,7 @@ public class NiceGuyTest {
 
 Maintenant, nous sommes sûr que lorsque nous précisons un langage ou non, nous avons bien un retour en français. En plus, si un langage n'est pas connu, nous avons bien l'erreur que nous attentions. Tout cela semble parfait.
 
-Donc comme "we areu completely bilinguale" (complètement bilingue en français dans l'accent), on peut faire le code pour parler en Anglais.
+Donc comme "we areu completely bilinguale" (complètement bilingue en français dans l'accent), on peut faire le code pour parler en Anglais :
 
 {% highlight java %}
 public class NiceGuy {
@@ -166,7 +166,7 @@ public class NiceGuy {
 }
 {% endhighlight %}
 
-On complète notre test pour être sûr que nous avons un code validé. 
+On complète notre test pour être sûr que nous avons un code validé :
 
 {% highlight java %}
 public class NiceGuyTest {
@@ -183,7 +183,7 @@ Bon ok maintenant ça fonctionne, mais on se rend bien compte que la méthode `s
 
 ### Étape 4 : et dans 6 mois, je ferai comment ?
 
-Donc pensons 3sec. Il nous faudrait un système pour avoir différentes façon de répondre à `sayHi` et de découvrir ces propositions tout seul (ou presque).
+Donc pensons 3 secondes. Il nous faudrait un système pour avoir différentes façon de répondre à `sayHi` et de découvrir ces propositions tout seul (ou presque).
 
 Je reviendrai sur le presque. Intéressons-nous à la transformation de notre implémentation. On peut utiliser le mécanisme d'héritage ou d'implémentation. Compte tenu qu'aucun langage n'aura de code en commun, je choisi de créer une interface à partir de NiceGuy. Pour des raisons de nommage, transformons l'actuelle `NiceGuy` en `FrenchNiceGuy` :
 
@@ -196,7 +196,7 @@ public class FrenchNiceGuy {
 }
 {% endhighlight %}
 
-Puis on peut faire une "extraction" vers une interface pour créer l'interface `NiceGuy`
+Puis on peut faire une "extraction" vers une interface pour créer l'interface `NiceGuy` :
 
 {% highlight java %}
 public interface NiceGuy {
@@ -204,7 +204,7 @@ public interface NiceGuy {
 }
 {% endhighlight %}
 
-si on revient vers `FrenchNiceGuy` on peut voir que la classe implémente notre nouvelle interface. Créons notre implémentation `AmericanNotSoNiceGuy`:
+Si on revient vers `FrenchNiceGuy` on peut voir que la classe implémente notre nouvelle interface. Créons notre implémentation `AmericanNotSoNiceGuy` :
 
 {% highlight java %}
 public class AmericanNotSoNiceGuy implements NiceGuy {
@@ -216,7 +216,7 @@ public class AmericanNotSoNiceGuy implements NiceGuy {
 }
 {% endhighlight %}
 
-On doit transformer nos tests pour qu'ils valident nos implémentations:
+On doit transformer nos tests pour qu'ils valident nos implémentations :
 
 {% highlight java %}
 public class NiceGuyTest {
@@ -239,7 +239,7 @@ public class NiceGuyTest {
 {% endhighlight %}
 
 
-On peut donc faire une liste d'implémentation. Il faut que cette liste fasse part du langage de l'implémentation. Ceci est le "presque" un peu plus haut.
+On peut donc faire une liste d'implémentations. Il faut que cette liste fasse partie du langage de l'implémentation. Ceci est le "presque" un peu plus haut.
 
 Il faut toutefois permettre à d'autres d'amener leurs langages.
 
@@ -258,13 +258,13 @@ public class NiceGuyManager {
 		this.gentlemen.load(NiceGuyManager.class.getResourceAsStream("/languages.properties"));
 	}
 	
-	public boolean isLanguageSpeaken(String language) {
+	public boolean isLanguageSpoken(String language) {
 		return gentlemen.containsKey(language);
 	}
 	
 	public NiceGuy forLocale(String language)
 			throws ClassNotFoundException, IllegalAccessException, InstantiationException { 
-		if (!isLanguageSpeaken(language)) {
+		if (!isLanguageSpOken(language)) {
 			throw new ClassNotFoundException(String.format("The language %s is not recognized", language));
 		}
 		return (NiceGuy) Class.forName(gentlemen.get(language).toString()).newInstance();
@@ -273,7 +273,7 @@ public class NiceGuyManager {
 }
 {% endhighlight %}
 
-et on remplace dans Main `new NiceGuy("XX").sayHi()` par `manager.forLocale("XX")`. Et normalement tous les tests sont bons. On a donc maintenant un état validé de notre comportement. Rajoutons quelques tests pour notre `NiceGuyManager` :
+Et on remplace dans Main `new NiceGuy("XX").sayHi()` par `manager.forLocale("XX")`. Normalement, tous les tests sont bons. On a donc maintenant un état validé de notre comportement. Rajoutons quelques tests pour notre `NiceGuyManager` :
 
 {% highlight java %}
 public class NiceGuyManagerTest {
@@ -311,7 +311,7 @@ public interface NiceGuy {
 }
 {% endhighlight %}
 
-on implémente la nouvelle méthode dans `FrenchNiceGuy` et `AmericanNotSoNiceGuy`. Les tests n'ont pas à bouger et sont encore valides. On voit là l'importance de ces tests, puisque nous avons "amélioré" nos implémentations sans contrarier le bon fonctionnement du code existant.
+On implémente la nouvelle méthode dans `FrenchNiceGuy` et `AmericanNotSoNiceGuy`. Les tests n'ont pas à bouger et sont encore valides. On voit là l'importance de ces tests, puisque nous avons "amélioré" nos implémentations sans contrarier le bon fonctionnement du code existant.
 
 On réécrit `NiceGuyManager` pour utiliser le fonctionnement de _SPI_ :
 
@@ -349,7 +349,7 @@ public class NiceGuyManager {
 }
 {% endhighlight %}
 
-et nous transformons le fichier _properties_  en un fichier _NiceGuy_ dans un dossier "META-INF/services". On peut rejouer les tests et on s'aperçoit que nous n'avons là encore pas dégradé le fonctionnement de notre implémentation. Certes, nous aurions pu nous arrêter en étape 4, mais nous bénéficier d'un bon conseil et qui a potentiellement grandement améliorer le futur de notre application.
+et nous transformons le fichier _properties_  en un fichier _NiceGuy_ dans un dossier "META-INF/services". On peut rejouer les tests et on s'aperçoit que nous n'avons là encore pas dégradé le fonctionnement de notre implémentation. Certes, nous aurions pu nous arrêter en étape 4, mais nous avons bénéficié d'un bon conseil et qui a potentiellement grandement amélioré le futur de notre application.
 
 ## Conclusion
 
@@ -361,7 +361,7 @@ D'autre part, nous avons :
  - utilisé un éditeur de code que l'on connait bien,
  - un SCM efficace, Git évidemment.
 
-En un sens, il faut toujours se remettre en cause en informatiques, en appliquant certaines pratiques développement informatique, on peut rapidement s'améliorer. Vous pouvez également mettre en place des outils de relecture de code comme Gerrit ou des phase de Pair Programming. Ces éléments peuvent avoir un retour sur investissement (puisque certain ne comprennent que ça) très important, au même titre que [plus de RAM, plus d'écran](http://thecodersbreakfast.net/index.php?post/2012/08/26/equipez-vos-d%C3%A9veloppeurs) ou une formation..
+En un sens, il faut toujours se remettre en cause en informatique, en appliquant certaines pratiques de développement informatique, on peut rapidement s'améliorer. Vous pouvez également mettre en place des outils de relecture de code comme Gerrit ou des phases de Pair Programming. Ces éléments peuvent avoir un retour sur investissement (puisque certains ne comprennent que ça) très important, au même titre que [plus de RAM, plus d'écran](http://thecodersbreakfast.net/index.php?post/2012/08/26/equipez-vos-d%C3%A9veloppeurs) ou une formation..
 
 Merci de m'avoir lu!
 
