@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-<div class="row" data-spy="scroll" data-target="#navbarCV" id="resume">
+<div class="row" id="resume">
 	<section id="comp">
 		<h1 class="page-header">Compétences</h1>
 		<dl class="dl-horizontal">
@@ -23,7 +23,7 @@ layout: page
 			</dd>
 		</dl>
 		<dl class="dl-horizontal">
-			<dt>Architecture et frameworks</dt>
+			<dt>Architecture &<br/>frameworks</dt>
 			<dd>
 				<span class="label label-info">Spring</span>
 			</dd>
@@ -99,6 +99,24 @@ layout: page
 			<div class="span2" style="text-align:center"><img src="http://zenika.com/images/logo-zenika.jpg" alt="Zenika" /></div>
 			<div class="span10">
 				<p>
+					<span class="lead">Support Engineer</span><br/>
+					<span class="muted">Paris</span><br/>
+					<span class="muted">02/2013 - maintenant</span> <span class="label label-success">En cours</span>
+				</p>
+				<p>
+					<ul>
+						<li>Support de niveau 1 et 2 sur Jenkins Enterprise</li>
+						<li>En relation avec Cloudbees pour le niveau 3</li>
+					</ul>
+				</p>
+				<p>
+					<span class="label label-info">Jenkins Enterprise</span>				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span2" style="text-align:center"><img src="http://zenika.com/images/logo-zenika.jpg" alt="Zenika" /></div>
+			<div class="span10">
+				<p>
 					<span class="lead">Gestion de la cellule support logiciel libre interministériel</span><br/>
 					<span class="muted">Paris</span><br/>
 					<span class="muted">11/2012 - maintenant</span> <span class="label label-success">En cours</span>
@@ -112,13 +130,26 @@ layout: page
 					</ul>
 				</p>
 				<p>
-					Patch effectué
+					Patches effectués:
 					<ul>
-						<li>Liferay : <a href="http://issues.liferay.com/browse/AUI-816" target="_blank">AUI-816</a></li>
+						<li>Liferay
+							<ul>
+								<li><a href="http://issues.liferay.com/browse/LPS-32056" target="_blank">LPS-32056</a> : modification de la taglib de Liferay pour mettre l'évaluation d'une checkbox lors de l'activation ou désactivation des champs de date.</li>
+							</ul>
+						</li>
+						
+						<li>Linshare
+							<ul>
+								<li>Suppression de NPE dans l'établissement des connexions LDAP à cause de mise à `null` d'attributs d'attributs dans les méthodes `finalize` de certaines classes.</li>
+							</ul>
+						</li>
 					</ul>
 				</p>
 				<p>
 					<span class="label label-info">Git</span>
+					<span class="label label-info">Ant</span>
+					<span class="label label-info">Maven</span>
+					<span class="label label-info">Jenkins</span>
 					<span class="label label-info">Redmine</span>
 					<span class="label label-info">Alfresco</span>
 					<span class="label label-info">OpenStack</span>
