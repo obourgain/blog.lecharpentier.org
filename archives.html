@@ -4,6 +4,8 @@ title: Archive
 ---
 
 <div id="archive">
+	<h2>Dernière mise en ligne</h2>
+	<h3>{{site.time | date_to_long_string}}</h3>
 	<h2>Archives</h2>
 	  {% for post in site.posts %}
 	    {% unless post.next %}
