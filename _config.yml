@@ -8,7 +8,7 @@ rss_feed: "/atom.xml"
 future: false
 
 markdown: rdiscount
-rdiscount
+rdiscount:
   extensions: [smart]
 pygments: true
 
