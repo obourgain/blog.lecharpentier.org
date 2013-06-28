@@ -9,7 +9,7 @@ excerpt: parce qu'un prompt qui convient vaux mieux que 1000 mots
 
 ## Rappel
 
-Ne réinventons pas la roue, même pour les descriptions: 
+Ne réinventons pas la roue, même pour les descriptions : 
 
 ### ZSH
 
@@ -22,7 +22,7 @@ Ne réinventons pas la roue, même pour les descriptions:
 
 ## oh-my-zsh theme
 
-Donc graphiquement, voilà à quoi ressemble mon `prompt`:
+Donc graphiquement, voilà à quoi ressemble mon `prompt` :
 
 ![oh-my-zsh theme](/images/2013-06-25-my-tribute-to-oh-my-zsh-theme/screenshot-01.png)
 
@@ -38,7 +38,7 @@ PROMPT='%{$fg_bold[cyan]%}%n: %{$fg[yellow]%}%04~%{$reset_color%}
 {% endhighlight %}
 
 ### Le caractère de `prompt`
-Pour se mettre dans le bain: le caractère "»" change de couleur en fonction de la réussite ou non de la dernière commande. Pour faire ça:
+Pour se mettre dans le bain: le caractère "»" change de couleur en fonction de la réussite ou non de la dernière commande. Pour faire ça :
 
 {% highlight sh %}
 function prompt_char {
@@ -55,15 +55,15 @@ $(prompt_char) '
 
 ### Git 
 
-car c'est selon moi le meilleurs (D)VCS sur le marché, je l'utilise partout (ce blog, les documentations que j'écris, les projets, etc.), je l'utilise même pour gérer les dépôts SVN.. Du coup je peux me servir que de Git.
+Car c'est selon moi le meilleur (D)VCS sur le marché, je l'utilise partout (ce blog, les documentations que j'écris, les projets, etc.), je l'utilise même pour gérer les dépôts SVN.. Du coup je ne peux me servir que de Git.
 
-Donc pour utiliser correctement Git, il faut voir ce que l'on fait:
+Donc pour utiliser correctement Git, il faut voir ce que l'on fait :
 
  - la branche sur laquelle on travaille,
  - la branche distante (si elle existe) et la différence avec la branche courante,
  - l'état du workspace, de l'index ainsi que du repository local.
 
-Ceci n'est pas trop compliqué car avec oh-my-zsh, il y a la fonction `git_prompt_status` qui permet de montrer ces informations. Il est uniquement nécessaire de mettre en place des variables:
+Ceci n'est pas trop compliqué car avec oh-my-zsh, il y a la fonction `git_prompt_status` qui permet de montrer ces informations. Il est uniquement nécessaire de mettre en place des variables :
 
 <table class="table">
 	<thead>
@@ -104,7 +104,7 @@ STATUS=${ZSH_THEME_GIT_PROMPT_PREFIX}
 STATUS=$STATUS${ZSH_THEME_GIT_PROMPT_BRANCH_PREFIX}${ref#refs/heads/}${ZSH_THEME_GIT_PROMPT_BRANCH_SUFFIX}
 {% endhighlight %}
 
-Je veux ensuite avoir la branche distante:
+Je veux ensuite avoir la branche distante :
 
 {% highlight sh %}
 remote=${$(command git rev-parse --verify ${hook_com[branch]}@{upstream} --symbolic-full-name 2>/dev/null)/refs\/remotes\/}
@@ -113,7 +113,7 @@ if [[ -n ${remote} ]] ; then
 fi
 {% endhighlight %}
 
-Puis après je veux savoir l'état de la branche locale par rapport à la branche distante
+Puis après je veux savoir l'état de la branche locale par rapport à la branche distante :
 
 {% highlight sh %}
 ahead=$(command git rev-list ${hook_com[branch]}@{upstream}..HEAD 2>/dev/null | wc -l | tr -d ' ')
@@ -130,9 +130,9 @@ if [ $ahead -eq 0 ] && [ $behind -eq 0 ]; then
 fi
 {% endhighlight %}
 
-Donc on met tout ce code dans une fonction, ainsi on peut l'appeler sur notre `prompt`. Petite nuance, je le met sur le `rprompt` pour que le `prompt` avec ou sans information Git ne bouge.
+Donc on met tout ce code dans une fonction, ainsi on peut l'appeler sur notre `prompt`. Petite nuance, je le met sur le `rprompt` pour que le `prompt` avec ou sans information Git ne bouge pas.
 
-Vous pouvez remarquer que j'ai usé et abusé des variables pour mettre les messages: c'est pour toi public! Non sans blague, ça permet de pouvoir changer les caractères / icônes utilisés sans toucher au code qui permet des les afficher.. oui oui c'est très MVC tout ça.. bref
+Vous pouvez remarquer que j'ai usé et abusé des variables pour mettre les messages : c'est pour toi public ! Non sans blague, ça permet de pouvoir changer les caractères / icônes utilisés sans toucher au code qui permet de les afficher.. oui oui c'est très MVC tout ça.. bref
 
 ## Conclusion
 
